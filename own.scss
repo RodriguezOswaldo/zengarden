@@ -2,34 +2,94 @@
 // Remember to leave your work commented out, 
 // so we can work without affecting others work 
 
-// .page-wrapper{
-//     grid-template-columns: repeat(3, 1fr);
+
+// //Variables for max-width
+// $small:40em;
+// $medium:80em;
+// $large:110em;
+
+// //mixin for breakpoints
+// @mixin breakpoint($break){
+// @if $break == large{
+//     @media (max-width: $large){
+//         @content;
+//     }
 // }
-// .intro header, .intro .summary{
+// @else if $break == medium{
+//     @media (max-width: $medium){
+//         @content;
+//     }
+// }
+// @else if $break == small{
+//     @media (max-width: $small){
+//         @content;
+//     }
+// }
+// @else{
+//     @media($break){
+//         @content;
+//     }
+// }
+// }
+// .page-wrapper{
+//     display: grid;
+// }
+// .intro >header {
+//     grid-area:top;
+//     background:blue;
+// }
+// .intro .summary{
+//     background:red;
+//     grid-area: next-top;
+// }
+// .explanation >h3{
+//     grid-area: first;
 //     background: gray;
-//     grid-area: firstHeader;
+// }
+// .participation{
+//     grid-area: second;
+//     background: gray;
+// }
+// .benefits{
+//     grid-area: third;
+//     background: gray;
+// }
+// .preamble >h3{
+//     grid-area: fourth;
+//     background: gray;
+// }
+
+// .requirements > h3{
+//     grid-area: fifth;
+//     background: gray;
 // }
 // .page-wrapper{
-//     display:grid;
-//     background:gray;
+//     grid-template-columns: repeat(5,1fr);
+//     @include breakpoint(large){
+//         background:blue;
+//         grid-template-columns: repeat(4,1fr);
+//     }
+//     @include breakpoint(medium){
+//         background:pink;
+//         grid-template-columns: repeat(2, 1fr);
+//         grid-template-areas: 
+//         ''
+//     }
+//     @include breakpoint(small){
+//         background: green;
+//     }
 // }
-// .preamble h3{
-//     grid-area: nav1;
-// }
-// .explanation h3{
-//     grid-area: nav2;
-// }
-// .participation h3{
-//     grid-area: nav3;
-// }
-// .benefits h3{
-//     grid-area: nav4;
-// }
-// .requirements h3{    
-//     grid-area: nav5;
-// }
-// body{
-//     grid-template: 
-//     'firstHeader firstHeader firstHeader '
-//     'nav1 nav2 nav3 ';
+
+// @media screen and (max-width: $small){
+//     .page-wrapper{
+    
+//     grid-template-columns: 1fr;
+//     grid-template-areas: 
+//     'top'
+//     'first'
+//     'fourth'
+//     'third'
+//     'next-top'
+//     'second';
+//     }
 // }
