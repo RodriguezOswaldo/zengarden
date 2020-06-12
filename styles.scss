@@ -1,0 +1,30 @@
+.page-wrapper{
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+.intro header, .intro .summary{
+    background: gray;
+    grid-area: firstHeader;
+}
+.preamble h3{
+    grid-area: nav1;
+}
+.explanation h3{
+    grid-area: nav2;
+}
+.participation h3{
+    grid-area: nav3;
+}
+.benefits h3{
+    grid-area: nav4;
+}
+.requirements h3{    
+    grid-area: nav5;
+}
+body{
+    grid-template: 
+    'firstHeader firstHeader firstHeader '
+    'nav1 nav2 nav3 ';
+}
+
+
