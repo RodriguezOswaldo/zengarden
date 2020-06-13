@@ -1,5 +1,5 @@
-// // Remember to leave your work commented out, 
-// // so we can work without affecting others work 
+// // // Remember to leave your work commented out, 
+// // // so we can work without affecting others work 
 
 // body {
 //   font-family: Roboto, Arial;
@@ -195,12 +195,36 @@
 //   /* ASIDE ------------------------------------------ */
 //   aside {
 //     background: yellowgreen;
+//     .wrapper{
+//         display: grid;
+//         font-size: 0.9em;
+//         grid-template-columns:repeat(2,1fr); 
+//         grid-template-rows: 1fr 1/2fr;
 
-//     .wrapper {
-//       display: grid;
-//       grid-template-columns: 1fr 1fr 1fr;
-//       font-size: 0.9em;
+//         & .design-selection{
+//             // background: blue;
+//         // grid-template-rows: 1fr;
+//         grid-column: 1/2;
+//         position: relative;
+//         left:45%;
+//         bottom:5%;
+//         margin-bottom: 20px;
+//         padding-bottom:10px; 
+//         }
+//         &div:nth-child(1n+2){
+//             // grid-row-end: 2;
+//             // grid-column-end: 2;
+//         }
+//         // &div:nth-child(3){
+//         //     grid-row-end: 2;
+//         // }
 //     }
+ 
+//   }
+//   aside .wrapper div:nth-child(1n+2){
+//       grid-row-end: 1;
+//     // background: gray;
+
 //   }
 
 //   /* FOOTER ----------------------------------------- */
