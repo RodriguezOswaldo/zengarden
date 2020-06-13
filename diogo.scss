@@ -199,11 +199,8 @@
 //         display: grid;
 //         font-size: 0.9em;
 //         grid-template-columns:repeat(2,1fr); 
-//         grid-template-rows: 1fr 1/2fr;
 
 //         & .design-selection{
-//             // background: blue;
-//         // grid-template-rows: 1fr;
 //         grid-column: 1/2;
 //         position: relative;
 //         left:45%;
@@ -211,16 +208,8 @@
 //         margin-bottom: 20px;
 //         padding-bottom:10px; 
 //         }
-//         &div:nth-child(1n+2){
-//             // grid-row-end: 2;
-//             // grid-column-end: 2;
-//         }
-//         // &div:nth-child(3){
-//         //     grid-row-end: 2;
-//         // }
 //     }
- 
-//   }
+// }
 //   aside .wrapper div:nth-child(1n+2){
 //       grid-row-end: 1;
 //     // background: gray;
