@@ -1,237 +1,370 @@
-// // Oswaldo's
-// // Remember to leave your work commented out, 
-// // so we can work without affecting others work 
+// // // // Remember to leave your work commented out, 
+// // // // so we can work without affecting others work 
 
+// // // VARIABLES -------------------------------------------
+// // Colors
+// $header_piece3-color: blue;
+// $aside_box-color: rgba(184, 129, 84, 0.925);
+// //oswaldo's color changed
+// $header-color: rgba(80, 151, 80, 90%);
+// $header_piece2-color: rgb(44, 94, 44);
+// $article_box-color: rgba(103, 141, 54, 0.658);
+// $article_box-color2: rgba(54, 141, 141, 0.658);
+// $footer-color: rgba(80, 151, 80, 90%);
 
+// $font_header-color: white;
+// $article_font-color: rgb(61, 76, 92);
+// $aside_font-color: black;
+// $aside_link-color: white;
+// $footer_link-color: black;  
+
+// // Sizes
+// $article_box-radius1: 20px;
+// $article_box-radius2: 40px;
+// $article_box-radius3: 40px;
+// $article_box-radius4: 20px;
+// $aside_box-radius1: 10px;
+// $aside_box-radius2: 20px;
+// $aside_box-radius3: 20px;
+// $aside_box-radius4: 10px;
+
+// // STYLE CODE ------------------------------------------
 // body {
-//     font-family: Roboto, Arial;
-//     margin: 0;
+//   font-family: Arial;
+//   margin: 0;
+//   //oswaldo's
+//   // animation: colors 30s infinite;
+//   line-height: 1.5;
+// }
+
+// @keyframes colors {
+//   0% {background-color: white;}
+//   25% {background-color: rgba(255, 0, 0, 0.2)}  
+//   50% {background-color: rgba(0, 255, 0, 0.2)}  
+//   75% {background-color: rgba(0, 0, 255, 0.2)}
+// }
+
+// @media only screen and (min-width: 35em) {
+
+//   /* HEADER ----------------------------------------- */
+//   header {
+//     color: $font_header-color;
+//     background: $header-color;
+//     position: fixed;
+//     top: 0px;
+//     left: 0px;
+//     width: 100%;
+//     display: grid;
+//     //oswaldo's
+//     text-align: initial;
+//     // padding: 2em;
+
+//     h1 {
+//       font-size: 3em;
+//       margin: 0.5em;
+//     }
+
+//     h2 {
+//       font-size: 0.8em;
+//       font-weight: normal;
+//       // margin: 0.5em;
+//       // padding: 0.5em;
+//     }
 //   }
-  
-//   @media only screen and (min-width: 35em) {
-  
-//     /* HEADER ----------------------------------------- */
-//     header {
-//       color: white;
-//       background: #224;
-//       position: fixed;
-//       top: 0px;
-//       left: 0px;
-//       width: 100%;
-//       display: grid;
-//       text-align: center;
-  
-//       h1 {
-//         font-size: 2em;
-//         margin: 15px 0 0 0;
-//       }
-  
-//       h2 {
-//         font-size: 0.8em;
-//         font-weight: normal;
-//         margin: 0 0 15px 0;
-//       }
-//     }
-  
-//     .summary {
-//       color: white;
-//       font-size: 0.7em;
-//       display: grid;
-//       grid-template-columns: 70% 30%;
-  
-//       p:nth-child(1) {
-//         background: darkgreen;
-//         padding: 10px;
-//         position: fixed;
-//         top: 71px;
-//         left: 0px;
-//         box-sizing: border-box;
-//         max-width: 400px;
-//         height: 45px;
-//         border-bottom-right-radius: 10px;
-//       }
-  
-//       p:nth-child(2) {
-//         background: blue;
-//         padding: 7px 10px;
-//         position: fixed;
-//         top: 71px;
-//         left: 400px;
-//         box-sizing: border-box;
-//         max-width: 250px;
-//         height: 35px;
-//         border-bottom-right-radius: 10px;
-//       }
-  
-//       a {
-//         color: white;
-//       }
-//     }
-  
-//     /* MAIN ------------------------------------------- */
-//     .preamble,
-//     .explanation,
-//     .participation,
-//     .benefits,
-//     .requirements {
-//       background: yellow;
-//       margin: 1em;
-//       padding: 1em;
-//       border-radius: 30px;
-//       margin-right: 300px;
-//     }
-  
-//     .preamble {
-//       margin-top: 150px;
-//     }
-  
-//     /* ASIDE ------------------------------------------ */
-//     aside {
-//       background: yellowgreen;
+
+//   .summary {
+//     color: $font_header-color;
+//     font-size: 0.7em;
+//     display: grid;
+//     grid-template-columns: 70% 30%;
+//     margin:70px;
+
+//     p:nth-child(1) {
+//       background: $header_piece2-color;
 //       padding: 10px;
 //       position: fixed;
-//       top: 150px;
-//       right: 10px;
-//       width: 30%;
-//       max-width: 250px;
-//       border-radius: 30px;
-  
-//       .wrapper {
-//         font-size: 0.9em;
-//       }
-//     }
-  
-//     /* FOOTER ----------------------------------------- */
-//     footer {
-//       background: green;
-//       padding: 5px;
-//       width: 100%;
-//       position: fixed;
-//       bottom: 0px;
-  
-//       a {
-//         color: black;
-//         font-size: 0.8em;
-//         font-weight: bold;
-//         text-decoration: none;
-//         padding: 5px 10px;
-//       }
-//     }
-//   }
-  
-//   @media only screen and (max-width: 35em) {
-  
-//     /* HEADER ----------------------------------------- */
-//     header {
-//       color: white;
-//       background: green;
-//       position: fixed;
-//       top: 0px;
+//       top: 71px;
 //       left: 0px;
-//       width: 100%;
-//       display: grid;
-//       text-align: center;
-  
-//       h1 {
-//         font-size: 2em;
-//         margin: 15px 0 0 0;
-//       }
-  
-//       h2 {
-//         font-size: 0.8em;
-//         font-weight: normal;
-//         margin: 0 0 15px 0;
-//       }
+//       box-sizing: border-box;
+//       max-width: 400px;
+//       height: 45px;
+//       border-bottom-right-radius: 10px;
+//       margin-top:7em;
 //     }
-  
-//     .summary {
-//       color: white;
-//       font-size: 0.7em;
-//       display: grid;
-//       grid-template-columns: 70% 30%;
-  
-//       p:nth-child(1) {
-//         background: darkgreen;
-//         padding: 10px;
-//         position: fixed;
-//         top: 71px;
-//         left: 0px;
-//         box-sizing: border-box;
-//         max-width: 70%;
-//         height: 55px;
-//         border-bottom-right-radius: 15px;
-//       }
-  
-//       p:nth-child(2) {
-//         background: blue;
-//         padding: 7px 10px;
-//         position: fixed;
-//         top: 71px;
-//         right: 0px;
-//         box-sizing: border-box;
-//         max-width: 30%;
-//         height: 40px;
-//       }
-  
-//       a {
-//         color: white;
-//       }
-//     }
-  
-//     /* MAIN ------------------------------------------- */
-//     .preamble,
-//     .explanation,
-//     .participation,
-//     .benefits,
-//     .requirements {
-//       background: yellow;
-//       margin: 1em;
-//       padding: 1em;
-//       border-radius: 30px;
-//     }
-  
-//     .preamble {
-//       margin-top: 150px;
-//     }
-  
-//     /* ASIDE ------------------------------------------ */
-//     aside {
-//       background: yellowgreen;
-//       .wrapper{
-//           display: grid;
-//           font-size: 0.9em;
-//           grid-template-columns:repeat(2,1fr); 
-  
-//           & .design-selection{
-//           grid-column: 1/2;
-//           position: relative;
-//           left:45%;
-//           bottom:5%;
-//           margin-bottom: 20px;
-//           padding-bottom:10px; 
-//           }
-//       }
-//   }
-//     aside .wrapper div:nth-child(1n+2){
-//         grid-row-end: 1;
-//       // background: gray;
-  
-//     }
-  
-//     /* FOOTER ----------------------------------------- */
-//     footer {
-//       background: green;
-//       padding: 5px;
-//       width: 100%;
+
+//     p:nth-child(2) {
+//       background: $header_piece3-color;
+//       padding: 7px 10px;
 //       position: fixed;
-//       bottom: 0px;
-  
-//       a {
-//         color: black;
-//         font-size: 0.8em;
-//         font-weight: bold;
-//         text-decoration: none;
-//         padding: 5px 10px;
-//       }
+//       top: 71px;
+//       left: 400px;
+//       box-sizing: border-box;
+//       max-width: 250px;
+//       height: 35px;
+//       border-bottom-right-radius: 10px;
+//       margin-top:7em;
+
+//     }
+
+//     a {
+//       color: $font_header-color;
 //     }
 //   }
+
+//   /* MAIN ------------------------------------------- */
+//   .preamble,
+//   .explanation,
+//   .participation,
+//   .benefits,
+//   .requirements {
+//     // background: $article_box-color;
+//     color: $article_font-color;
+//     margin: 1em;
+//     padding: 1em;
+//     border-radius: $article_box-radius1 $article_box-radius2 $article_box-radius3 $article_box-radius4;
+//     margin-right: 300px;
+//     //osw's
+//     border: 6px rgba(0, 89, 255, 0.322) groove;
+//   }
+//     //Oswaldo's playing around with colors forms and shapes 
+//   .preamble, 
+//   .participation,
+//   .requirements{
+//     transform: skew(4deg);
+//     background-color:  $article_box-color;
+//     background-size: 50px 50px; 
+//     background-image: radial-gradient(
+//       #779c89a8 10%,
+//       transparent 5%
+//     ),
+//     linear-gradient(
+//       35deg,
+//       transparent 40%, #77a88f 48%,
+//       #618b76 52%, transparent 52%
+//     ),
+//     linear-gradient(
+//       135deg,
+//       transparent 48%, #62a381 48%,
+//       #4e7a63 52%, transparent 52%
+//     )
+//   }
+//   .explanation,
+//   .benefits{
+//     transform: skew(-4deg);
+//     background-color:  $article_box-color2;
+//     background-size: 50px 50px; 
+//     background-image: radial-gradient(
+//       #889c77a8 10%,
+//       transparent 5%
+//     ),
+//     linear-gradient(
+//       35deg,
+//       transparent 40%, #7780a8 48%,
+//       #617a8b 52%, transparent 52%
+//     ),
+//     linear-gradient(
+//       135deg,
+//       transparent 48%, #7ca362 48%,
+//       #4e7a63 52%, transparent 52%
+//     )
+//   }
+//   .preamble {
+//     margin-top: 150px;
+//   }
+  
+//   .requirements {
+//     margin-bottom: 50px;
+//   }
+
+//   .preamble:hover,
+//   .explanation:hover,
+//   .participation:hover,
+//   .benefits:hover,
+//   .requirements:hover {
+//   background: rgba(116, 179, 92, 0.541);
+//   color: black;
+//   transition-duration: 1s;
+//   border: 1px gray solid;
+//   animation: articles 1s  delay  direction fill-mode;
+// }
+// .explanation:hover,
+// .benefits:hover{
+//   background: rgba(92, 179, 172, 0.541);
+
+// }
+// // @keyframes articles {
+// //   50%{
+// //     transform: skew(20deg);
+// //   }
+// // }
+
+//   /* ASIDE ------------------------------------------ */
+//   aside {
+//     background: $aside_box-color;
+//     color: $aside_font-color;
+//     padding: 10px;
+//     position: fixed;
+//     top: 150px;
+//     right: 10px;
+//     width: 30%;
+//     max-width: 250px;
+//     border-radius: $aside_box-radius1 $aside_box-radius2 $aside_box-radius3 $aside_box-radius4;
+//     margin-top:10px;
+
+//     .wrapper {
+//       font-size: 0.9em;
+//     }
+
+//     a {
+//         color: $aside_link-color;
+//     }
+//   }
+
+//   /* FOOTER ----------------------------------------- */
+//   footer {
+//     background: $footer-color;
+//     padding: 5px;
+//     width: 100%;
+//     position: fixed;
+//     bottom: 0px;
+
+//     a {
+//       color: $footer_link-color;
+//       font-size: 0.8em;
+//       font-weight: bold;
+//       text-decoration: none;
+//       padding: 5px 10px;
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 35em) {
+
+//   /* HEADER ----------------------------------------- */
+//   header {
+//     color: $font_header-color;
+//     background: $header-color;
+//     position: fixed;
+//     top: 0px;
+//     left: 0px;
+//     width: 100%;
+//     display: grid;
+//     text-align: center;
+
+//     h1 {
+//       font-size: 2em;
+//       margin: 15px 0 0 0;
+//     }
+
+//     h2 {
+//       font-size: 0.8em;
+//       font-weight: normal;
+//       margin: 0 0 15px 0;
+//     }
+//   }
+
+//   .summary {
+//     color: $font_header-color;
+//     font-size: 0.7em;
+//     display: grid;
+//     grid-template-columns: 70% 30%;
+
+//     p:nth-child(1) {
+//       background: $header_piece2-color;
+//       padding: 10px;
+//       position: fixed;
+//       top: 71px;
+//       left: 0px;
+//       box-sizing: border-box;
+//       max-width: 70%;
+//       height: 55px;
+//       border-bottom-right-radius: 15px;
+//     }
+
+//     p:nth-child(2) {
+//       background: $header_piece3-color;
+//       padding: 7px 10px;
+//       position: fixed;
+//       top: 71px;
+//       right: 0px;
+//       box-sizing: border-box;
+//       max-width: 30%;
+//       height: 40px;
+//     }
+
+//     a {
+//       color: $font_header-color;
+//     }
+//   }
+
+//   /* MAIN ------------------------------------------- */
+//   .preamble,
+//   .explanation,
+//   .participation,
+//   .benefits,
+//   .requirements {
+//     background: $article_box-color;
+//     margin: 1em;
+//     padding: 1em;
+//     border-radius: 30px;
+//     border-radius: $article_box-radius1 $article_box-radius2 $article_box-radius3 $article_box-radius4;
+//     border: 1px transparent solid;
+//   }
+
+//   .preamble {
+//     margin-top: 150px;
+//   }
+  
+//   .preamble:hover,
+//   .explanation:hover,
+//   .participation:hover,
+//   .benefits:hover,
+//   .requirements:hover {
+//   background: orange;
+//   transition-duration: 1s;
+//   border: 1px gray solid;
+// }
+
+//   /* ASIDE ------------------------------------------ */
+//   aside {
+//     background: $aside_box-color;
+//     color: $aside_font-color;
+//     padding: 10px;
+
+//     .wrapper{
+//         display: grid;
+//         font-size: 0.9em;
+//         grid-template-columns:repeat(2,1fr); 
+
+//         & .design-selection{
+//         grid-column: 1/2;
+//         position: relative;
+//         left:45%;
+//         bottom:5%;
+//         margin-bottom: 20px;
+//         padding-bottom:10px; 
+//         }
+//     }
+// }
+//   aside .wrapper div:nth-child(1n+2){
+//       grid-row-end: 1;
+
+//   }
+
+//   /* FOOTER ----------------------------------------- */
+//   footer {
+//     background: $footer-color;
+//     padding: 5px;
+//     width: 100%;
+//     position: fixed;
+//     bottom: 0px;
+
+//     a {
+//       color: $footer_link-color;
+//       font-size: 0.8em;
+//       font-weight: bold;
+//       text-decoration: none;
+//       padding: 5px 10px;
+//     }
+//   }
+// }
