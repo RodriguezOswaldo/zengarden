@@ -3,93 +3,235 @@
 // so we can work without affecting others work 
 
 
-// //Variables for max-width
-// $small:40em;
-// $medium:80em;
-// $large:110em;
-
-// //mixin for breakpoints
-// @mixin breakpoint($break){
-// @if $break == large{
-//     @media (max-width: $large){
-//         @content;
+// body {
+//     font-family: Roboto, Arial;
+//     margin: 0;
+//   }
+  
+//   @media only screen and (min-width: 35em) {
+  
+//     /* HEADER ----------------------------------------- */
+//     header {
+//       color: white;
+//       background: #224;
+//       position: fixed;
+//       top: 0px;
+//       left: 0px;
+//       width: 100%;
+//       display: grid;
+//       text-align: center;
+  
+//       h1 {
+//         font-size: 2em;
+//         margin: 15px 0 0 0;
+//       }
+  
+//       h2 {
+//         font-size: 0.8em;
+//         font-weight: normal;
+//         margin: 0 0 15px 0;
+//       }
 //     }
-// }
-// @else if $break == medium{
-//     @media (max-width: $medium){
-//         @content;
+  
+//     .summary {
+//       color: white;
+//       font-size: 0.7em;
+//       display: grid;
+//       grid-template-columns: 70% 30%;
+  
+//       p:nth-child(1) {
+//         background: darkgreen;
+//         padding: 10px;
+//         position: fixed;
+//         top: 71px;
+//         left: 0px;
+//         box-sizing: border-box;
+//         max-width: 400px;
+//         height: 45px;
+//         border-bottom-right-radius: 10px;
+//       }
+  
+//       p:nth-child(2) {
+//         background: blue;
+//         padding: 7px 10px;
+//         position: fixed;
+//         top: 71px;
+//         left: 400px;
+//         box-sizing: border-box;
+//         max-width: 250px;
+//         height: 35px;
+//         border-bottom-right-radius: 10px;
+//       }
+  
+//       a {
+//         color: white;
+//       }
 //     }
-// }
-// @else if $break == small{
-//     @media (max-width: $small){
-//         @content;
+  
+//     /* MAIN ------------------------------------------- */
+//     .preamble,
+//     .explanation,
+//     .participation,
+//     .benefits,
+//     .requirements {
+//       background: yellow;
+//       margin: 1em;
+//       padding: 1em;
+//       border-radius: 30px;
+//       margin-right: 300px;
 //     }
-// }
-// @else{
-//     @media($break){
-//         @content;
+  
+//     .preamble {
+//       margin-top: 150px;
 //     }
-// }
-// }
-// .page-wrapper{
-//     display: grid;
-// }
-// .intro >header {
-//     grid-area:top;
-//     background:blue;
-// }
-// .intro .summary{
-//     background:red;
-//     grid-area: next-top;
-// }
-// .explanation >h3{
-//     grid-area: first;
-//     background: gray;
-// }
-// .participation{
-//     grid-area: second;
-//     background: gray;
-// }
-// .benefits{
-//     grid-area: third;
-//     background: gray;
-// }
-// .preamble >h3{
-//     grid-area: fourth;
-//     background: gray;
-// }
-
-// .requirements > h3{
-//     grid-area: fifth;
-//     background: gray;
-// }
-// .page-wrapper{
-//     grid-template-columns: repeat(5,1fr);
-//     @include breakpoint(large){
-//         background:blue;
-//         grid-template-columns: repeat(4,1fr);
+  
+//     /* ASIDE ------------------------------------------ */
+//     aside {
+//       background: yellowgreen;
+//       padding: 10px;
+//       position: fixed;
+//       top: 150px;
+//       right: 10px;
+//       width: 30%;
+//       max-width: 250px;
+//       border-radius: 30px;
+  
+//       .wrapper {
+//         font-size: 0.9em;
+//       }
 //     }
-//     @include breakpoint(medium){
-//         background:pink;
-//         grid-template-columns: repeat(2, 1fr);
-//         grid-template-areas: 
-//         ''
+  
+//     /* FOOTER ----------------------------------------- */
+//     footer {
+//       background: green;
+//       padding: 5px;
+//       width: 100%;
+//       position: fixed;
+//       bottom: 0px;
+  
+//       a {
+//         color: black;
+//         font-size: 0.8em;
+//         font-weight: bold;
+//         text-decoration: none;
+//         padding: 5px 10px;
+//       }
 //     }
-//     @include breakpoint(small){
-//         background: green;
+//   }
+  
+//   @media only screen and (max-width: 35em) {
+  
+//     /* HEADER ----------------------------------------- */
+//     header {
+//       color: white;
+//       background: green;
+//       position: fixed;
+//       top: 0px;
+//       left: 0px;
+//       width: 100%;
+//       display: grid;
+//       text-align: center;
+  
+//       h1 {
+//         font-size: 2em;
+//         margin: 15px 0 0 0;
+//       }
+  
+//       h2 {
+//         font-size: 0.8em;
+//         font-weight: normal;
+//         margin: 0 0 15px 0;
+//       }
 //     }
-// }
-
-// @media screen and (max-width: $small){
-//     .page-wrapper{
-    
-//     grid-template-columns: 1fr;
-//     grid-template-areas: 
-//     'top'
-//     'first'
-//     'fourth'
-//     'third'
-//     'next-top'
-//     'second';
+  
+//     .summary {
+//       color: white;
+//       font-size: 0.7em;
+//       display: grid;
+//       grid-template-columns: 70% 30%;
+  
+//       p:nth-child(1) {
+//         background: darkgreen;
+//         padding: 10px;
+//         position: fixed;
+//         top: 71px;
+//         left: 0px;
+//         box-sizing: border-box;
+//         max-width: 70%;
+//         height: 55px;
+//         border-bottom-right-radius: 15px;
+//       }
+  
+//       p:nth-child(2) {
+//         background: blue;
+//         padding: 7px 10px;
+//         position: fixed;
+//         top: 71px;
+//         right: 0px;
+//         box-sizing: border-box;
+//         max-width: 30%;
+//         height: 40px;
+//       }
+  
+//       a {
+//         color: white;
+//       }
 //     }
-// }
+  
+//     /* MAIN ------------------------------------------- */
+//     .preamble,
+//     .explanation,
+//     .participation,
+//     .benefits,
+//     .requirements {
+//       background: yellow;
+//       margin: 1em;
+//       padding: 1em;
+//       border-radius: 30px;
+//     }
+  
+//     .preamble {
+//       margin-top: 150px;
+//     }
+  
+//     /* ASIDE ------------------------------------------ */
+//     aside {
+//       background: yellowgreen;
+//       .wrapper{
+//           display: grid;
+//           font-size: 0.9em;
+//           grid-template-columns:repeat(2,1fr); 
+  
+//           & .design-selection{
+//           grid-column: 1/2;
+//           position: relative;
+//           left:45%;
+//           bottom:5%;
+//           margin-bottom: 20px;
+//           padding-bottom:10px; 
+//           }
+//       }
+//   }
+//     aside .wrapper div:nth-child(1n+2){
+//         grid-row-end: 1;
+//       // background: gray;
+  
+//     }
+  
+//     /* FOOTER ----------------------------------------- */
+//     footer {
+//       background: green;
+//       padding: 5px;
+//       width: 100%;
+//       position: fixed;
+//       bottom: 0px;
+  
+//       a {
+//         color: black;
+//         font-size: 0.8em;
+//         font-weight: bold;
+//         text-decoration: none;
+//         padding: 5px 10px;
+//       }
+//     }
+//   }
