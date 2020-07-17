@@ -6,7 +6,7 @@
 // $header_piece3-color: blue;
 // $aside_box-color: rgba(184, 129, 84, 0.925);
 // //oswaldo's color changed
-// $header-color: rgba(80, 151, 80, 90%);
+// $header-color: rgb(80, 151, 80);
 // $header_piece2-color: rgb(44, 94, 44);
 // $article_box-color: rgba(103, 141, 54, 0.658);
 // $article_box-color2: rgba(54, 141, 141, 0.658);
@@ -34,7 +34,12 @@
 //   margin: 0;
 //   //oswaldo's
 //   // animation: colors 30s infinite;
-//   line-height: 1.5;
+//   line-height: 1.4;
+//   padding:15px;
+//   font-size: 16px;
+// }
+// h1, h2, h3, h4{
+//   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 // }
 
 // @keyframes colors {
@@ -133,6 +138,7 @@
 //     transform: skew(4deg);
 //     background-color:  $article_box-color;
 //     background-size: 50px 50px; 
+//     transition:  1s linear ;
 //     background-image: radial-gradient(
 //       #779c89a8 10%,
 //       transparent 5%
@@ -153,6 +159,8 @@
 //     transform: skew(-4deg);
 //     background-color:  $article_box-color2;
 //     background-size: 50px 50px; 
+//     transition:  1s linear ;
+//     box-shadow: 2px 2px 2px #38473f;
 //     background-image: radial-gradient(
 //       #889c77a8 10%,
 //       transparent 5%
@@ -181,11 +189,10 @@
 //   .participation:hover,
 //   .benefits:hover,
 //   .requirements:hover {
-//   background: rgba(116, 179, 92, 0.541);
-//   color: black;
-//   transition-duration: 1s;
-//   border: 1px gray solid;
-//   animation: articles 1s  delay  direction fill-mode;
+//     background: rgba(116, 179, 92, 0.541);
+//     color: black;
+//     border: 1px gray solid;
+
 // }
 // .explanation:hover,
 // .benefits:hover{
