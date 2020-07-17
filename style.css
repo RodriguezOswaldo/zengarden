@@ -306,12 +306,20 @@ h3 {
 header h1:before {
   content: "";
   position: absolute;
-  width: 200px;
-  height: 160px;
+  width: 390px;
+  height: 210px;
   background: #3498db;
-  left: 20px;
-  bottom: -7px;
-  background: url(/images/lion.svg);
+  left: -90px;
+  bottom: -20px;
+  background: url(/images/zen.svg);
+  transform: scale(0.5);
+  animation: animate 1.1s;
+}
+
+@keyframes animate {
+  50% {
+    transform: rotateY(60deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
