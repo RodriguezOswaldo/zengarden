@@ -86,11 +86,17 @@ h3 {
       font-size: 1.3em;
       font-weight: normal;
       margin: 0 0 15px 0;
-      background: red;
       padding: 5px;
       margin: 15px 30%;
       border-radius: 5px;
+      //I added this animation to the h2 we can play around with colors if you'd like
+      background-size: 200%; 
+      background-image: linear-gradient(to left,#00cec9,  red, #112999);
+      transition: 0.7s;
     }
+  }
+  h2:hover{
+    background-position:right;
   }
 
   .summary {
