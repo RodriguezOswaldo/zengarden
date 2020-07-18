@@ -205,7 +205,7 @@ header h1:before {
   }
 
   header h1:before {
-    left: -180px;
+    left: -170px;
     bottom: -55px;
     transform: scale(0.3);
   }
