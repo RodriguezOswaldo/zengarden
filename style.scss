@@ -1,9 +1,384 @@
-@import 'diogo.scss';
-@import 'moises.scss';
-@import 'own.scss';
+// @import 'diogo.scss';
+// @import 'moises.scss';
+// @import 'own.scss';
 //Please open your file and work on that
 //All what you need  to do is to
 //Apply the preprocesor in the following way
 // sass --watch style.scss:style.css 
 // you shouldn't need to create any adicional file
 
+// VARIABLES -------------------------------------------
+// Colors
+$header-color: rgba(80, 151, 80, 90%);
+$header_piece2-color: rgb(44, 94, 44);
+$header_piece3-color: blue;
+$article_box-color: rgba(103, 141, 54, 0.3);
+$article_box-color2: rgba(54, 141, 141, 0.3);
+$article_box_hv-color: rgba(116, 179, 92, 0.541);
+$article_box_hv-color2: rgba(92, 179, 172, 0.541);
+$aside_box-color: rgba(184, 129, 84, 0.925);
+$footer-color: rgba(80, 151, 80, 90%);
+
+$font_header-color: white;
+$article_font-color: black;
+$aside_font-color: black;
+$aside_link-color: white;
+$footer_link-color: black;
+
+// Sizes
+$article_box-radius1: 20px;
+$article_box-radius2: 40px;
+$article_box-radius3: 60px;
+$article_box-radius4: 20px;
+$aside_box-radius1: 10px;
+$aside_box-radius2: 20px;
+$aside_box-radius3: 40px;
+$aside_box-radius4: 10px;
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+// STYLE CODE ------------------------------------------
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  //animation: colors 30s infinite;
+  line-height: 1.4;
+  padding: 15px;
+  font-size: 16px;
+  height: 100%;
+}
+
+h1,
+h3 {
+  font-family: Pacifico, Arial;
+}
+
+@media only screen and (min-width: 35em) {
+  /* HEADER ----------------------------------------- */
+  header {
+    color: $font_header-color;
+    background: $header-color;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: grid;
+    text-align: center;
+
+    h1 {
+      font-size: 3em;
+      margin: 15px 0 0 0;
+    }
+
+    h2 {
+      font-family: Indie Flower, Arial;
+      font-size: 1.3em;
+      font-weight: normal;
+      margin: 0 0 15px 0;
+      padding: 5px;
+      margin: 15px 30%;
+      border-radius: 5px;
+      //I added this animation to the h2 we can play around with colors if you'd like
+      background-size: 200%; 
+      background-image: linear-gradient(to left,#00cec9,  red, #112999);
+      transition: 0.7s;
+    }
+  }
+  h2:hover{
+    background-position:right;
+  }
+  .summary {
+    color: $font_header-color;
+    font-size: 0.7em;
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+    p:nth-child(1) {
+      background: $header_piece2-color;
+      padding: 10px;
+      position: fixed;
+      top: 140px;
+      left: 0px;
+      box-sizing: border-box;
+      max-width: 400px;
+      height: 45px;
+      border-bottom-right-radius: 10px;
+    }
+
+    p:nth-child(2) {
+      background: $header_piece3-color;
+      padding: 7px 10px;
+      position: fixed;
+      top: 140px;
+      left: 400px;
+      box-sizing: border-box;
+      max-width: 250px;
+      height: 35px;
+      border-bottom-right-radius: 10px;
+    }
+
+    a {
+      color: $font_header-color;
+    }
+  }
+
+  /* MAIN ------------------------------------------- */
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+    background: $article_box-color;
+    color: $article_font-color;
+    transform: skew(4deg);
+    margin: 2em;
+    padding: 1em;
+    border-radius: $article_box-radius1 $article_box-radius2 $article_box-radius3 $article_box-radius4;
+    margin-right: 315px;
+    // border: 5px transparent solid;
+    transition: 1s linear;
+    box-shadow: 5px 5px 5px #38473f;
+  }
+
+
+  .explanation,
+  .benefits {
+    transform: skew(-4deg);
+    background-color: $article_box-color2;
+  }
+
+  .preamble {
+    margin-top: 220px;
+  }
+
+  .requirements {
+    margin-bottom: 50px;
+  }
+
+  .preamble:hover,
+  .explanation:hover,
+  .participation:hover,
+  .benefits:hover,
+  .requirements:hover {
+    background: $article_box_hv-color;
+    border: 5px gray groove;
+    font-size: 1.1em;
+  }
+
+  /* ASIDE ------------------------------------------ */
+  aside {
+    background: $aside_box-color;
+    color: $aside_font-color;
+    padding: 10px;
+    position: fixed;
+    top: 160px;
+    right: 10px;
+    max-width: 250px;
+    border-radius: $aside_box-radius1 $aside_box-radius2 $aside_box-radius3 $aside_box-radius4;
+    box-shadow: 5px 5px 5px #38473f;
+    line-height: 1.2;
+
+    .wrapper {
+      font-size: 0.9em;
+    }
+
+    h3 {
+      margin-bottom: 0;
+      font-family: Arial;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    a {
+      color: $aside_link-color;
+    }
+  }
+
+  /* FOOTER ----------------------------------------- */
+  footer {
+    background: $footer-color;
+    padding: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    margin: 0 -10px;
+
+    a {
+      color: $footer_link-color;
+      font-size: 0.8em;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 35em) {
+
+  /* HEADER ----------------------------------------- */
+  header {
+    color: $font_header-color;
+    background: $header-color;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    display: grid;
+    text-align: center;
+
+    h1 {
+      font-size: 2em;
+      margin: 15px 0 0 0;
+    }
+    h2 {
+      font-size: 0.8em;
+      font-weight: normal;
+      margin: 0 0 15px 0;
+    }
+  }
+  .summary {
+    color: $font_header-color;
+    font-size: 0.7em;
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+    p:nth-child(1) {
+      background: $header_piece2-color;
+      padding: 10px;
+      position: fixed;
+      top: 71px;
+      left: 0px;
+      box-sizing: border-box;
+      max-width: 70%;
+      height: 55px;
+      border-bottom-right-radius: 15px;
+    }
+
+    p:nth-child(2) {
+      background: $header_piece3-color;
+      padding: 7px 10px;
+      position: fixed;
+      top: 71px;
+      right: 0px;
+      box-sizing: border-box;
+      max-width: 30%;
+      height: 40px;
+    }
+
+    a {
+      color: $font_header-color;
+    }
+  }
+
+  /* MAIN ------------------------------------------- */
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+    background: $article_box-color;
+    transform: skew(4deg);
+    margin: 1em;
+    padding: 1em;
+    border-radius: 30px;
+    border-radius: $article_box-radius1 $article_box-radius2 $article_box-radius3 $article_box-radius4;
+    // border: 5px transparent solid;
+    transition: 1s linear;
+    box-shadow: 5px 5px 5px #38473f;
+  }
+
+  .explanation,
+  .benefits {
+    transform: skew(-4deg);
+    background-color: $article_box-color2;
+  }
+
+  .preamble {
+    margin-top: 150px;
+  }
+
+  .preamble:hover,
+  .explanation:hover,
+  .participation:hover,
+  .benefits:hover,
+  .requirements:hover {
+    background: $article_box_hv-color;
+    border: 2px gray groove;
+    // font-size: 1.2em;
+  }
+
+  /* ASIDE ------------------------------------------ */
+  aside {
+    background: $aside_box-color;
+    color: $aside_font-color;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #38473f;
+
+    .wrapper {
+      display: grid;
+      font-size: 0.9em;
+      grid-template-columns: repeat(2, 1fr);
+
+      & .design-selection {
+        grid-column: 1/2;
+        position: relative;
+        left: 45%;
+        bottom: 5%;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+      }
+    }
+
+    h3 {
+      margin-bottom: 0;
+      font-family: Arial;
+    }
+
+    ul {
+      margin: 0;
+    }
+  }
+
+  aside .wrapper div:nth-child(1n+2) {
+    grid-row-end: 1;
+  }
+
+  /* FOOTER ----------------------------------------- */
+  footer {
+    background: $footer-color;
+    padding: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    margin: 0 -10px;
+
+    a {
+      color: $footer_link-color;
+      font-size: 0.8em;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+  }
+}
+
+header h1:before {
+  content: '';
+  position:absolute;
+  width: 390px;
+  height: 210px;
+  background: #3498db;
+  left: -90px;
+  bottom: -20px;
+  background: url(/images/zen.svg);
+  transform: scale(.5);
+  animation: animate 1.1s ;
+}
+@keyframes animate{
+  50%{
+    transform:rotateY(60deg); 
+  }
+}
