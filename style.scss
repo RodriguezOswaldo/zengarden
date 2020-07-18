@@ -42,7 +42,6 @@ $aside_box-radius4: 10px;
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  //animation: colors 30s infinite;
   line-height: 1.4;
   padding: 15px;
   font-size: 16px;
@@ -53,7 +52,9 @@ h1,
 h3 {
   font-family: Pacifico, Arial;
 }
-header h1:before {
+header{
+
+ h1:before {
     content: '';
     position:absolute;
     width: 390px;
@@ -65,11 +66,29 @@ header h1:before {
     transform: scale(.5);
     animation: animate 1.1s ;
   }
+  h2{
+    font-family: Indie Flower, Arial;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin: 0 0 15px 0;
+    padding: 5px;
+    margin: 15px 30%;
+    border-radius: 5px;
+    background-size: 200%; 
+    background-image: linear-gradient(to left,#00cec9,  red, #112999);
+    transition: 0.7s;
+  }
+  h2:hover{
+    background-position:right;
+
+  }
+}
   @keyframes animate{
     50%{
       transform:rotateY(60deg); 
     }
   }
+
 
 @media only screen and (min-width: 35em) {
   /* HEADER ----------------------------------------- */
@@ -87,25 +106,26 @@ header h1:before {
       font-size: 3em;
       margin: 15px 0 0 0;
     }
+}
 
-    h2 {
-      font-family: Indie Flower, Arial;
-      font-size: 1.3em;
-      font-weight: normal;
-      margin: 0 0 15px 0;
-      padding: 5px;
-      margin: 15px 30%;
-      border-radius: 5px;
-      //I added this animation to the h2 we can play around with colors if you'd like
-      background-size: 200%; 
-      background-image: linear-gradient(to left,#00cec9,  red, #112999);
-      transition: 0.7s;
-    }
-  }
+//     h2 {
+//       font-family: Indie Flower, Arial;
+//       font-size: 1.3em;
+//       font-weight: normal;
+//       margin: 0 0 15px 0;
+//       padding: 5px;
+//       margin: 15px 30%;
+//       border-radius: 5px;
+//       //I added this animation to the h2 we can play around with colors if you'd like
+//       background-size: 200%; 
+//       background-image: linear-gradient(to left,#00cec9,  red, #112999);
+//       transition: 0.7s;
+//     }
+//   }
 
-  h2:hover{
-    background-position:right;
-  }
+//   h2:hover{
+//     background-position:right;
+//   }
   .summary {
     color: $font_header-color;
     font-size: 0.7em;
@@ -246,22 +266,23 @@ header h1:before {
     width: 100%;
     display: grid;
     text-align: center;
-
+    
     h1 {
       font-size: 2em;
       margin: 15px 0 0 0;
     }
+    & h1:before{
+        left:-170px;
+        bottom: -55px;
+        transform: scale(.3); 
+    }
     h2 {
       font-size: 0.8em;
       font-weight: normal;
-      margin: 0 0 15px 0;
+      margin:0 30%;
     }
   }
-  header h1:before{
-          left:-170px;
-          bottom: -55px;
-          transform: scale(.3);
-      }
+
   .summary {
     color: $font_header-color;
     font-size: 0.7em;
@@ -308,7 +329,6 @@ header h1:before {
     padding: 1em;
     border-radius: 30px;
     border-radius: $article_box-radius1 $article_box-radius2 $article_box-radius3 $article_box-radius4;
-    // border: 5px transparent solid;
     transition: 1s linear;
     box-shadow: 5px 5px 5px #38473f;
   }

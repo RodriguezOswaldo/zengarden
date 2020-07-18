@@ -26,6 +26,21 @@ header h1:before {
   transform: scale(0.5);
   animation: animate 1.1s;
 }
+header h2 {
+  font-family: Indie Flower, Arial;
+  font-size: 1.3em;
+  font-weight: normal;
+  margin: 0 0 15px 0;
+  padding: 5px;
+  margin: 15px 30%;
+  border-radius: 5px;
+  background-size: 200%;
+  background-image: linear-gradient(to left, #00cec9, red, #112999);
+  transition: 0.7s;
+}
+header h2:hover {
+  background-position: right;
+}
 
 @keyframes animate {
   50% {
@@ -47,22 +62,6 @@ header h1:before {
   header h1 {
     font-size: 3em;
     margin: 15px 0 0 0;
-  }
-  header h2 {
-    font-family: Indie Flower, Arial;
-    font-size: 1.3em;
-    font-weight: normal;
-    margin: 0 0 15px 0;
-    padding: 5px;
-    margin: 15px 30%;
-    border-radius: 5px;
-    background-size: 200%;
-    background-image: linear-gradient(to left, #00cec9, red, #112999);
-    transition: 0.7s;
-  }
-
-  h2:hover {
-    background-position: right;
   }
 
   .summary {
@@ -198,16 +197,15 @@ header h1:before {
     font-size: 2em;
     margin: 15px 0 0 0;
   }
-  header h2 {
-    font-size: 0.8em;
-    font-weight: normal;
-    margin: 0 0 15px 0;
-  }
-
   header h1:before {
     left: -170px;
     bottom: -55px;
     transform: scale(0.3);
+  }
+  header h2 {
+    font-size: 0.8em;
+    font-weight: normal;
+    margin: 0 30%;
   }
 
   .summary {
