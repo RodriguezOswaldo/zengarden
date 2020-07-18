@@ -14,6 +14,24 @@ h3 {
   font-family: Pacifico, Arial;
 }
 
+header h1:before {
+  content: "";
+  position: absolute;
+  width: 390px;
+  height: 210px;
+  background: #3498db;
+  left: -90px;
+  bottom: -20px;
+  background: url(/images/zen.svg);
+  transform: scale(0.5);
+  animation: animate 1.1s;
+}
+
+@keyframes animate {
+  50% {
+    transform: rotateY(60deg);
+  }
+}
 @media only screen and (min-width: 35em) {
   /* HEADER ----------------------------------------- */
   header {
@@ -186,6 +204,12 @@ h3 {
     margin: 0 0 15px 0;
   }
 
+  header h1:before {
+    left: -180px;
+    bottom: -55px;
+    transform: scale(0.3);
+  }
+
   .summary {
     color: white;
     font-size: 0.7em;
@@ -299,24 +323,6 @@ h3 {
     font-weight: bold;
     text-decoration: none;
     padding: 5px 10px;
-  }
-}
-header h1:before {
-  content: "";
-  position: absolute;
-  width: 390px;
-  height: 210px;
-  background: #3498db;
-  left: -90px;
-  bottom: -20px;
-  background: url(/images/zen.svg);
-  transform: scale(0.5);
-  animation: animate 1.1s;
-}
-
-@keyframes animate {
-  50% {
-    transform: rotateY(60deg);
   }
 }
 
